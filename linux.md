@@ -5,25 +5,12 @@
 
 > apt换源
 > 1. apt源的位置 ```vim /etc/apt/sources.list```
-> 2. 跟新源```apt updates```
+> 2. 跟新源```apt update```
 #### 阿里源
 ##### ```deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib```
 ##### ```deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib```
 
-****
-> 配置docker远程访问
-> 1. 编辑`vim /usr/lib/systemd/system/docker.service`文件
-> 2. 修改`ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"`
-> 3. 重新加载配置文件
-`systemctl daemon-reload` 
-> 4. 重启docker `systemctl start docker`
-> 5. 查看端口2375是否开启`netstat -nptl`
-****
-> 修改docker镜像源
-> 1. 修改或添加`/etc/docker/daemon.json`
-> 2. 内容为 ```{
-"registry-mirrors": ["http://hub-mirror.c.163.com"]}```
-> 3. 执行 `systemctl restart docker.service` 
+
 ****
 > linux下基本目录解释
 > * /bin：bin是Binary的缩写, 这个目录存放着最经常使用的命令。
@@ -52,5 +39,5 @@
 > 将在线用户t出，强制用户用户下线
 > * `pkill -kill -t pts/2`
 ****
-
+> 查看所有的服务 `service --status-all`
 
