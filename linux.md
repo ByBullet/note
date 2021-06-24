@@ -40,4 +40,5 @@
 > * `pkill -kill -t pts/2`
 ****
 > 查看所有的服务 `service --status-all`
-
+****
+>查看二进制文件 `xxd /bin/ls`
